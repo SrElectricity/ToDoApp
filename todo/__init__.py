@@ -13,10 +13,19 @@ class Todo:
         self.completed = True
 
     def add_tag(self, tag: str):
-        self.tags.append(tag)
+        if tag not in self.tags:
+            self.tags.append(tag)
 
     def __str__(self):
         return f"{self.code_id} - {self.title}"
+
+
+class TodoBook:
+
+    def __init__(self):
+        self.todos: dict[int, Todo] = {}
+
+    def add_todo(self):
 
 
 
