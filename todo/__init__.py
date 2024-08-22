@@ -12,9 +12,11 @@ class Todo:
     def mark_completed(self):
         self.completed = True
 
-    def add_tag (self, tag: str):
+    def add_tag(self, tag: str):
+        self.tags.append(tag)
 
-
+    def __str__(self):
+        return f"{self.code_id} - {self.title}"
 
 
 
